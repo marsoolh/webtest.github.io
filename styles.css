@@ -1,0 +1,254 @@
+/* Reset some default styles for consistency */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a more aesthetically pleasing and readable font for the body */
+body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Style the header */
+.header {
+    background-color: #0078d4;
+    border-bottom: 3px solid #005a9e;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.tabs {
+    display: flex;
+    gap: 15px;
+}
+
+.tab {
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+    color: #fff;
+}
+
+.tab a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.tab:hover {
+    color: #fff;
+    background-color: #005a9e;
+    border-radius: 5px;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #0078d4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+.hamburger-menu .tab {
+    padding: 10px;
+    border-bottom: 1px solid #005a9e;
+    text-align: center;
+}
+
+.hamburger-menu .tab:hover {
+    background-color: #005a9e;
+}
+
+.hamburger-menu.active {
+    display: flex;
+}
+
+/* Mobile nav styles */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0078d4;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+}
+
+.mobile-tab {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 1px solid #005a9e;
+}
+
+/* Define a class for the degree and school information */
+.degree-info {
+    margin-bottom: 5px; /* Add some space between the degree info and the location/date */
+}
+
+/* Define a class for the location and date information */
+.location-date {
+    margin-top: -10px; /* Adjust this value to control the spacing */
+}
+
+/* Ensure that the spacing works well on mobile devices */
+@media (max-width: 768px) {
+    .degree-info {
+        margin-bottom: 3px; /* Adjust spacing for smaller screens */
+    }
+
+    .location-date {
+        margin-top: -8px; /* Adjust spacing for smaller screens */
+    }
+}
+
+/* Style the container */
+.container {
+    max-width: 800px;
+    margin: 100px auto 20px auto; /* Adjust margin to account for fixed header */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the sections */
+.section {
+    margin-top: 20px;
+}
+
+/* Style headings */
+h1 {
+    font-size: 32px;
+    color: #0078d4;
+}
+
+h2 {
+    font-size: 28px;
+    color: #005a9e;
+    margin-top: 20px;
+    border-bottom: 2px solid #0078d4;
+    padding-bottom: 10px;
+}
+
+/* Style links in sections */
+.section a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}
+
+/* Add some padding for better readability */
+.section p, .section ul {
+    margin-top: 10px;
+}
+
+/* Style for video containers */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Optional: Ensure the first section is visually distinct */
+.section.active {
+    border: 2px solid #0077ff;
+    padding: 10px; /* Adjust the value as needed */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .tabs {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .mobile-nav.active {
+        display: flex;
+    }
+}
+
+/* Additional Styles */
+.home-link {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.home-link:hover {
+    color: #f0f4f8;
+}
+
